@@ -1,0 +1,122 @@
+:root {
+    --white: #FFFFFF;
+    --black: #000000;
+	--color1: #7BE0AD;
+	--color2: #AEE5D8;
+	--color3: #E0B0D5;
+	--color4: #E5D0E3;
+	--color5: #E7E5E5;
+	--Mcolor1: #39B89A;
+	--Mcolor2: #79D3BE;
+	--Mcolor3: #B9EEE1;
+	--Mcolor4: #FEC9D7;
+	--Mcolor5: #FF5883;
+	--Mcolor6: #FF91AD;
+}
+
+.main-container {
+    max-width: 72em;
+    margin: 0 auto;
+    font-family: Inter;
+	color: var(--white);
+	background-color: var(--color5);
+}
+
+.banner {
+	background-color: var(--color1);
+	color: var(--white);
+	padding: 1em;
+	border-radius: 1em;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+}
+
+.banner-text {
+	font-size: 3em;
+	width: 100%;
+	margin: auto;
+	text-align: center;
+}
+
+.section-card {
+	border-radius: 1em;
+	background-color: var(--color2);
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+}
+
+.section-card-image {
+    width: 100%;
+}
+
+.section-card-text {
+	padding: 0.5em;
+	font-size: 1em;
+}
+
+#banner1 {
+	grid-area: bt1;
+	background-color: var(--color1);
+}
+
+#banner2 {
+	grid-area: bt2;
+	background-color: var(--color3);
+}
+
+#sectionCard1 {
+	grid-area: sc1;
+	background-color: var(--Mcolor1);
+}
+
+#sectionCard2 {
+	grid-area: sc2;
+	background-color: var(--Mcolor4);
+	color: var(--black);
+}
+
+#sectionCard3 {
+	grid-area: sc3;
+	background-color: var(--Mcolor6);
+}
+
+.main-container {
+    display: grid;
+    column-gap: 1em;
+}
+
+.main-container {
+	grid-template:
+	"bt1 bt1 bt1 bt1" minmax(6em, auto)
+	" .   .   .   . " minmax(2em, auto)
+	"bt2 bt2 bt2 bt2" minmax(30em, auto)
+	" .   .   .   . " minmax(2em, auto)
+	"sc1 sc1 sc1 sc1" minmax(30em, auto)
+	" .   .   .   . " minmax(2em, auto)
+	"sc2 sc2 sc2 sc2" minmax(30em, auto)
+	" .   .   .   . " minmax(4em, auto)
+	"sc3 sc3 sc3 sc3" minmax(6em, auto)
+	" .   .   .   . " minmax(2em, auto)
+}
+
+@media (min-width: 50em) {
+    .main-container {
+		grid-template:
+		"bt1 bt1 bt1 bt1 bt1  .   .  bt2 bt2 bt2 bt2 bt2" minmax(8em, auto)
+		" .   .   .   .   .   .   .   .   .   .   .   . " minmax(2em, auto)
+		"sc1 sc1 sc1 sc1 sc2 sc2 sc2 sc2 sc3 sc3 sc3 sc3" minmax(30em, auto)
+		" .   .   .   .   .   .   .   .   .   .   .   . " minmax(2em, auto)
+	}
+}
+
+@media (min-width: 60em) {
+    .main-container {
+		grid-template:
+		"bt1 bt1 bt1 bt1 bt1  .   .  bt2 bt2 bt2 bt2 bt2" minmax(8em, auto)
+		" .   .   .   .   .   .   .   .   .   .   .   . " minmax(2em, auto)
+		"sc1 sc1 sc1 sc1 sc2 sc2 sc2 sc2 sc3 sc3 sc3 sc3" minmax(34em, auto)
+		" .   .   .   .   .   .   .   .   .   .   .   . " minmax(4em, auto)
+    }
+}
